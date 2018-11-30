@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "build": "babel ./bin/www -d dist",
+    "start": "npm run build && node ./bin/www"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -13,5 +14,9 @@
     "google-auth-library": "^2.0.1",
     "mongodb": "^3.1.10",
     "morgan": "~1.9.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
   }
 }
